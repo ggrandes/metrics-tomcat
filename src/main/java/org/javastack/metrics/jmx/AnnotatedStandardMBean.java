@@ -82,13 +82,11 @@ public class AnnotatedStandardMBean extends StandardMBean {
 		context.unregisterMBean(objectName);
 	}
 
-	/** Instance where the MBean interface is implemented by another object. */
 	public <T> AnnotatedStandardMBean(final T impl, final Class<T> mbeanInterface)
 			throws NotCompliantMBeanException {
 		super(impl, mbeanInterface);
 	}
 
-	/** Instance where the MBean interface is implemented by this object. */
 	protected AnnotatedStandardMBean(final Class<?> mbeanInterface) throws NotCompliantMBeanException {
 		super(mbeanInterface);
 	}
