@@ -2,7 +2,7 @@
 
 Metrics for Tomcat via JMX, usable with jmxtrans-agent and Graphite/Grafana. Open Source Java project under Apache License v2.0
 
-### Current Stable Version is [1.0.0](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Ametrics-tomcat)
+### Current Stable Version is [2.0.0](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Ametrics-tomcat-jakarta)
 
 ---
 
@@ -24,7 +24,7 @@ Metrics for Tomcat via JMX, usable with jmxtrans-agent and Graphite/Grafana. Ope
 
 #### Usage
 
-  1. Put `metrics-tomcat-x.x.x.jar` into `${CATALINA_HOME}/lib/`
+  1. Put `metrics-tomcat-jakarta-x.x.x.jar` into `${CATALINA_HOME}/lib/`
   2. Configure Metrics valve in `${CATALINA_BASE}/server.xml` inside Engine or Host section.
 
 ```xml
@@ -48,6 +48,16 @@ Metrics for Tomcat via JMX, usable with jmxtrans-agent and Graphite/Grafana. Ope
 ---
 
 ## MAVEN
+
+###### jakarta.servlet (tomcat 10+, java11+)
+
+    <dependency>
+        <groupId>org.javastack</groupId>
+        <artifactId>metrics-tomcat-jakarta</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+
+###### javax.servlet (tomcat 7, 8.5, 9)
 
     <dependency>
         <groupId>org.javastack</groupId>

@@ -3,7 +3,6 @@ package org.javastack.metrics;
 import java.io.IOException;
 
 import javax.management.JMException;
-import javax.servlet.ServletException;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.LifecycleState;
@@ -12,6 +11,8 @@ import org.apache.catalina.connector.Response;
 import org.apache.catalina.valves.ValveBase;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+
+import jakarta.servlet.ServletException;
 
 public class MetricsValve extends ValveBase {
     private static final Log log = LogFactory.getLog(MetricsValve.class);
